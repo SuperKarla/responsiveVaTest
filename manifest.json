@@ -1,0 +1,7 @@
+{
+  "name": "responsive-design",
+  "short_name": "responsive-design",
+  "description": "application for practicing responsive design",
+  "start_url": "/",
+  "display": "standalone"
+}

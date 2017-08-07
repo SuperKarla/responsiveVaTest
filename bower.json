@@ -1,0 +1,13 @@
+{
+  "name": "responsive-design",
+  "description": "application for practicing responsive design",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}

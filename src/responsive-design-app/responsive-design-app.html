@@ -1,0 +1,97 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<!--<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">-->
+<!--<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">-->
+
+<dom-module id="responsive-design-app">
+    <template>
+        <style>
+             :host {
+                height: 100%;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                background-color: limegreen;
+            }
+
+            /* The 3 main components will have a 100% width */
+            #topbar .scene .bottombar {
+                flex: 1 100%;
+            }
+
+            @media (min-width: 800px){
+                #topbar{
+                    background-color: grey;
+                }
+            }
+            .topbar {
+                height: 20%;
+                display: flex;
+                flex-direction: row;
+                /* Centering items both vertical and horisontal */
+                align-items: center;
+                justify-content: center;
+                padding: 0% 1% 0% 3%;
+                background-color: lightsalmon;
+            }
+
+            .title {
+                flex: 1 auto;
+                /* Use em (relative to the rules of the parent (or the default of 16px) for setting font sizes */
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                padding: 3%;
+            }
+
+            .scene {
+                height: 60%;
+                background-color: salmon;
+            }
+
+            .bottombar {
+                height: 20%;
+                background-color: darksalmon;
+            }
+        </style>
+        <div class="container">
+            <div id="topbar">
+                <div class="title">Responsivenessss</div>
+                <div class="progressbar"></div>
+                <div class="menu">
+                    <paper-icon-button id="playAgainButton" class="button" src="src/assets/playagainicon.svg" on-click="_onPlayAgain"></paper-icon-button>
+                    <paper-icon-button id="muteButton" class="button" src="src/assets/speakericon.svg" on-click="toggleMuted"></paper-icon-button>
+                </div>
+            </div>
+            <div class="scene">
+
+            </div>
+            <div class="bottombar"></div>
+        </div>
+
+    </template>
+
+    <script>
+        /** @polymerElement */
+        class ResponsiveDesignApp extends Polymer.Element {
+            static get is() { return 'responsive-design-app'; }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'responsive-design-app'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(ResponsiveDesignApp.is, ResponsiveDesignApp);
+    </script>
+</dom-module>
